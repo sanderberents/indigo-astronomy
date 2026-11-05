@@ -58,7 +58,7 @@
 			<img id="logo" src="img/logo.png" alt=""/>
 			<div class="container">
 						<h1><strong>Device Drivers &amp; Agents</strong></h1>
-						<p>INDIGO distribution contains <span class="driver-total">143</span> device drivers and <span class="agent-total">10</span> agents out of the box.</p>
+						<p>INDIGO distribution contains <span class="driver-total">144</span> device drivers and <span class="agent-total">11</span> agents out of the box.</p>
 			</div>
 		</div>
 
@@ -71,19 +71,19 @@
 							<div class="card__icon" aria-hidden="true">D</div>
 
 							<h2>Device drivers</h2>
-							<p><span class="driver-total">143</span> drivers for cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, polar alignment, GPS and auxiliary devices.</p>
+							<p><span class="driver-total">144</span> drivers for cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, polar alignment, GPS and auxiliary devices.</p>
 							<p><a href="#drivers">Browse the drivers &rarr;</a></p>
 						</article>
 						<article class="card">
 							<div class="card__icon" aria-hidden="true">A</div>
 							<h2>Agents</h2>
-							<p><span class="agent-total">10</span> agents that carry out imaging, guiding, focusing and plate solving on the server itself.</p>
+							<p><span class="agent-total">11</span> agents that carry out imaging, guiding, focusing and plate solving on the server itself.</p>
 							<p><a href="#agents">Browse the agents &rarr;</a></p>
 						</article>
 					</div>
 
-					<h2>Device drivers and agents distributed with INDIGO 3.0-9</h2>
-					<p>INDIGO 3.0-9 comes with <span class="driver-total">143</span> device drivers and <span class="agent-total">10</span> agents.
+					<h2>Device drivers and agents distributed with INDIGO 3.0-10</h2>
+					<p>INDIGO 3.0-10 comes with <span class="driver-total">144</span> device drivers and <span class="agent-total">11</span> agents.
 					The icons show on which platforms each of them is available:
 					<span class="icon-linux"></span> Linux, <span class="icon-apple"></span> macOS and
 					<span class="icon-windows"></span> Windows.</p>
@@ -97,10 +97,10 @@
 						<label for="driver-search">Search by manufacturer, device or driver
 							<input id="driver-search" type="search" placeholder="Try ZWO, mount, focuser&hellip;" autocomplete="off"/>
 						</label>
-						<span id="driver-count" aria-live="polite">143 results</span>
+						<span id="driver-count" aria-live="polite">144 results</span>
 					</div>
 					<table id="driver-table">
-						<caption class="sr-only">INDIGO 3.0-9 device drivers and the platforms they run on</caption>
+						<caption class="sr-only">INDIGO 3.0-10 device drivers and the platforms they run on</caption>
 						<thead><tr><th scope="col">Driver</th><th scope="col" class="os">Runs on</th><th scope="col">Device and documentation</th></tr></thead>
 						<tbody>
 
@@ -187,6 +187,11 @@
 						<tr><td>indigo_ccd_omegonpro</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
 						<td>OmegonPro CCD camera, filter wheel and focuser driver
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/ccd_omegonpro/README.md">Read more »</a>
+						</td></tr>
+
+						<tr><td>indigo_ccd_pentax</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"></span></td>
+						<td>Pentax DSLR camera driver
+						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/ccd_pentax/README.md">Read more »</a>
 						</td></tr>
 
 						<tr><td>indigo_ccd_playerone</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
@@ -824,7 +829,7 @@
 
 					<h2><a id="agents"></a>Agents</h2>
 					<table id="agent-table">
-						<caption class="sr-only">INDIGO 3.0-9 agents and the platforms they run on</caption>
+						<caption class="sr-only">INDIGO 3.0-10 agents and the platforms they run on</caption>
 						<thead><tr><th scope="col">Agent</th><th scope="col" class="os">Runs on</th><th scope="col">Device and documentation</th></tr></thead>
 						<tbody>
 
@@ -866,6 +871,11 @@
 						<tr><td>indigo_agent_mount</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
 						<td>Mount agent
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_mount/README.md">Read more »</a>
+						</td></tr>
+
+						<tr><td>indigo_agent_platesolver</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
+						<td>Platesolver agent (native plate solver, no external solver needed)
+						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_platesolver/README.md">Read more »</a>
 						</td></tr>
 
 						<tr><td>indigo_agent_scripting</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
