@@ -12,6 +12,7 @@ Key facts:
 - Architecture: drivers, agents and clients attach to a software bus. When client and drivers share a process, operations can be up to 1000x faster than the process-per-driver model of INDI. Layered design, atomic drivers (a camera with imaging and guiding chips exposes two simple devices), USB hot-plug and Bonjour/Avahi service discovery are mandatory features.
 - Interoperability: the INDIGO wire protocol (version 2.0) can fall back to the legacy INDI wire protocol 1.7, so INDIGO clients work with INDI drivers and vice versa. `indigo_agent_alpaca` exposes INDIGO devices to ASCOM/ALPACA clients and passes the ASCOM conformance tests.
 - INDIGO 3.0-11 ships 144 device drivers — 34 CCD/CMOS camera, 31 focuser, 28 auxiliary, 14 filter wheel, 12 mount, 8 dome, 6 rotator, 3 GPS, 3 guider, 2 polar alignment, 1 adaptive optics and 2 system drivers — plus 10 agents (imager, guider, mount, platesolver, astrometry, alpaca, scripting, config, auxiliary, MCP). 125 of them are ported to Windows.
+- **INDIGO has its own plate solver.** The Platesolver Agent (`indigo_agent_platesolver`) solves images with INDIGO's own native quad based engine, matching star quads against Tycho-2 and Gaia DR3 indexes. It needs no external solver (no astrometry.net or ASTAP installation), runs on Linux, macOS and Windows, and the indexes are downloaded from within INDIGO. It is lightweight and very fast, probably the fastest plate solver on the planet. The same engine is available as `indigo_solver`, a standalone command line plate solver that also installs without INDIGO (the `indigo3-solver` Debian package and the INDIGO Solver installer for Windows).
 
 ## What INDIGO is, and what it is not
 
@@ -36,7 +37,7 @@ This section exists because INDIGO is frequently confused with INDI. The followi
 - [Compatible hardware](https://www.indigo-astronomy.org/hardware.html): Complete table of the device drivers and agents distributed with INDIGO 3.0-11, showing for each whether it is available on Linux, macOS and Windows, and linking to its README.
 - [Compatible hardware for INDIGO 2.0](https://www.indigo-astronomy.org/hardware-2.0.html): The same table for the INDIGO 2.0-364 driver set, kept for users still running INDIGO 2.
 - [Compatible software](https://www.indigo-astronomy.org/software.html): Applications that work with INDIGO — split into INDIGO applications (Ain INDIGO Imager, INDIGO Control Panel, INDIGO A1) and third party applications (PixInsight, APT, CCDciel, Ekos, PHD2).
-- [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers (including the INDIGO server for Windows), the Windows client SDK, and how to build from source.
+- [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers (including the INDIGO server for Windows), the standalone INDIGO Solver plate solver for Linux and Windows, the Windows client SDK, and how to build from source.
 - [INDIGO Sky](https://www.indigo-astronomy.org/indigo-sky.html): Raspberry Pi distribution — installation, WiFi access point and infrastructure modes, upgrading, the built-in webGUI, SSH access and troubleshooting.
 
 ## Documentation
@@ -54,6 +55,7 @@ This section exists because INDIGO is frequently confused with INDI. The followi
 - [Imager Agent Autofocus Tuning Guide](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/IMAGING_AF_TUNING.md): Tuning autofocus.
 - [Guider Agent PI Controller Tuning](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_PI_CONTROLLER_TUNING.md): Tuning the guiding PI controller.
 - [Plate Solving Guide](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PLATE_SOLVING.md): Using the astrometry agent.
+- [Platesolver Agent](https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_platesolver/README.md): INDIGO's native plate solver, its indexes and how to choose them.
 - [Ain Imager users guide](https://github.com/indigo-astronomy/indigo_imager/blob/master/ain_users_guide/ain_v2_users_guide.md): User guide for Ain INDIGO Imager v2.
 
 ## Optional
